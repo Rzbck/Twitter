@@ -1,6 +1,8 @@
-#source 'https://rubygems.org'
-gem 'rspec'
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 gem 'dotenv'
-gem 'twitter'
 gem 'pry'
+gem 'rspec'
 gem 'rubocop'
+gem 'twitter'
