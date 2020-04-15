@@ -4,7 +4,7 @@ require 'dotenv' # Appelle la gem dotenv
 require 'twitter' # Appelle la gem twitter
 Dotenv.load('../.env') if Dotenv.load('.env').empty?
 
-def login_twitter
+def client
   Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV[TWITTER_CONSUMER_KEY]
     config.consumer_secret     = ENV[TWITTER_CONSUMER_SECRET]
@@ -14,4 +14,4 @@ def login_twitter
 end
 
 # ligne qui permet de tweeter sur ton compte
-login_twitter.update('My first Tweet with ruby')
+client.update('My first Tweet with ruby')
